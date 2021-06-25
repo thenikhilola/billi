@@ -4,155 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team</title>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background: #000;
+        }
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        .strip{
+            position: absolute;
+            height: 100vh;
+            background: #fff;
+            width: 0.0625rem;
+            opacity: .3;
+        }
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+        .one{
+            left: 25%;
+        }        
 
+        .two{
+            left: 50%;
+        }
+
+        .three{
+            left: 75%;
+        }
+
+        .container{
+            align-items: flex-start;
+            display: flex;
+            justify-content: center;
+            padding: 16.875rem 1.5rem;
+        }
+
+        .card-grid{
+            display: grid;
+            grid-column-gap: 1.5rem;
+            max-width: 75rem;
+            width: 100%;
+        }
+
+        @media(min-width: 75rem){
+            .card-grid{
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .card{
+            position: relative;
+        }
+
+        .card::before{
+            content: '';
+            display: block;
+            padding-bottom: 150%;
+        }
+
+        .card-background{
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.9375rem;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: filter .2s linear, transform 200ms linear;
+        }
+
+        .card:hover .card-background{
+            transform: scale(1.25) translateZ(0);
+        }
+
+        .card-grid:hover > .card:not(:hover) .card-background{
+            filter: brightness(1) saturate(0) contrast(1) blur(1.25rem);
+        }
+
+        .card-content{
+            padding: 14.375rem 1.25rem;
+            position: absolute;
+            top: 0;
+        }
+
+        .card-category{
+            color: rgba(255, 255, 255, .5);
+            font-size: .9rem;
+            text-transform: uppercase;
+        }
+
+        .card-heading{
+            color: rgba(255, 255, 255, .9);
+            font-size: 1.9rem;
+            text-shadow: 0.125rem 0.125rem 1.25rem rgba(0 , 0, 0, .2);
+        }
+        p{
+            margin-top: -1.875rem;
+        }
+    </style>
 </head>
 <body>
-    
-<div class="container">
 
-<header>
-
-    <a href="#" class="logo">Smart<span>Study</span></a>
-
-    <div id="menu" class="fas fa-bars"></div>
-
-    <nav class="navbar">
-        <a href="home.html">home</a>
-        <a href="Startup.html">Startup</a>
-        <a href="Team.html">Team</a>
-        <a href="plans.html">plans</a>
-        <a href="review.html">review</a>
-        <a href="contact.html">contact</a>
-    </nav>
-
-</header>
-
-<h1 class="heading"> experienced Teams </h1>
-
-<!-- Team section  -->
-
-<section class="Team">
-
-    <div class="box">
-        <img src="images/Team-1.png" alt="">
-        <h3>john deo</h3>
-        <span>Team</span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
+    <div>
+        <div class="strip one"></div>
+        <div class="strip two"></div>
+        <div class="strip three"></div>
     </div>
 
-    <div class="box">
-        <img src="images/Team-2.png" alt="">
-        <h3>john deo</h3>
-        <span>Team</span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+    <section class="container">
+        <div class="card-grid">
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(1.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Megan Ross</h3>
+                    <p class="card-category">
+                        Graphic Designer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(2.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Jane Lee</h3>
+                    <p class="card-category">
+                        Web Designer
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(3.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Jess Wale</h3>
+                    <p class="card-category">
+                        Project Director
+                    </p>
+                </span>
+            </a>
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(4.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Sesa T.</h3>
+                    <p class="card-category">
+                        Designer
+                    </p>
+                </span>
+            </a>
+
+            
+
+            <a href="" class="card">
+                <div class="card-background" style="background-image: url(5.jpg);"></div>
+                <span class="card-content">
+                    <h3 class="card-heading">Kalise Trim</h3>
+                    <p class="card-category">
+                        Designer
+                    </p>
+                </span>
+            </a>
         </div>
-    </div>
-
-    <div class="box">
-        <img src="images/Team-3.png" alt="">
-        <h3>john deo</h3>
-        <span>Team</span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="images/Team-4.png" alt="">
-        <h3>john deo</h3>
-        <span>Team</span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
-    </div>
-
-</section>
-
-<!-- footer section  -->
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>about us</h3>
-            <p>I never took a day off in my twenties. Not one</p>
-        </div>
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="home.html">home</a>
-        <a href="Startup.html">Startup</a>
-        <a href="Team.html">Team</a>
-        <a href="plans.html">plans</a>
-        <a href="review.html">review</a>
-        <a href="contact.html">contact</a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#">facebook</a>
-            <a href="#">twitter</a>
-            <a href="#">instagram</a>
-            <a href="#">linkedin</a>
-        </div>
-
-        <div class="box">
-            <h3>contact us</h3>
-           <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-           <p> <i class="fas fa-envelope"></i> thenocanlimited@gmail.com </p>
-           <p> <i class="fas fa-map-marker-alt"></i> india </p>
-        </div>
-
-    </div>
-
-    <div class="credit"> created by <span> No Can </span> | all rights reserved </div>
-
-</section>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- custom js file link -->
-<script src="js/script.js"></script>
-
+    </section>
 </body>
 </html>
